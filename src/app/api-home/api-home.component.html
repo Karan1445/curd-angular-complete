@@ -1,0 +1,5 @@
+<button (click)="realpost()">Add</button>
+<p *ngFor="let i of Display_array"><img [src]="i['avatar']"> | {{i["name"]}} 
+    <button (click)="Delete(i['id'])">Delete</button>&nbsp;
+    <button (click)="post(i['id'])">More Info</button>
+</p>

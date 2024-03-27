@@ -1,0 +1,10 @@
+<img *ngIf="Data['id']>0" [src]="Data['avatar']" > 
+<h1 *ngIf="Data['id']>0" >{{Data["name"]}}</h1>
+<button (click)="Delete()" *ngIf="Data['id']>0"> Delete</button>
+<br><button (click)="GoBack()" *ngIf="Data['id']>0">Back</button><br *ngIf="Data['id']>0"><br *ngIf="Data['id']>0"><br *ngIf="Data['id']>0"><br *ngIf="Data['id']">
+
+<form #Datas="ngForm" (submit)="update(Datas.value)">
+    name:<input name="name" type="text" placeholder="Name" [value]="Data['name']" [ngModel]/>
+<br/>Avatar:<input type="text" name="avatar"    [value]="Data['avatar']" [ngModel] />
+  <br/> Update: <input type="submit">
+</form>

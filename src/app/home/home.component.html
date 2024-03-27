@@ -1,0 +1,20 @@
+<form  #DemoForm="ngForm" (ngSubmit)="Save(DemoData)">
+    <h1>{{DemoForm.value | json}}</h1>
+    <input type="text"  [(ngModel)]="DemoData.name" placeholder="Name" name="name">
+    <input type="Text" placeholder="Surname" [(ngModel)]="DemoData.surname" name="surname">
+    <input type="submit" class="btn btn-danger">
+
+</form>
+
+<br><br>
+<ul *ngFor="let i of DemoList">
+    <li>{{i.id}} | {{i.name}} | {{i.surname}}    &nbsp;
+         <button class="btn btn-danger" (click)="Delete(i)">Delete</button> &nbsp;
+         <button class="btn btn-info" (click)="GetById(i.id)">More info</button>
+    
+    </li>
+    
+</ul>
+
+
+
